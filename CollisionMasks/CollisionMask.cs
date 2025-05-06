@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace CollisionMasks
 {
-    internal class CollisionMask
+    public class CollisionMask
     {
         private readonly BitArray _bits; // Stores the collision data as a series of bits
         public int Width { get; } // Width of the texture
@@ -13,8 +13,8 @@ namespace CollisionMasks
         // Constructor: Creates a collision mask from a texture
         public CollisionMask(Texture2D texture)
         {
-            Width = texture.Width; // Set the width of the mask
-            Height = texture.Height; // Set the height of the mask
+            Width = texture.Width;
+            Height = texture.Height;
 
             // Get the color data (pixels) from the texture
             Color[] pixels = new Color[Width * Height];
